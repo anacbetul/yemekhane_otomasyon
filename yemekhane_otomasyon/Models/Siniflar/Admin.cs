@@ -10,7 +10,6 @@ namespace yemekhane_otomasyon.Models.Siniflar
     public class Admin
     {
 
-        dsad
         [Key]
         public int AdminId { get; set; }
 
