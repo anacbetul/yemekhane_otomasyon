@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
-
+    
 namespace yemekhane_otomasyon.Models.Siniflar
 {
     public class Personel
