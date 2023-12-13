@@ -8,5 +8,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
     public class test
     {
         // test class
+        public int id { get; set; }
+        public string name { get; set; }
     }
 }

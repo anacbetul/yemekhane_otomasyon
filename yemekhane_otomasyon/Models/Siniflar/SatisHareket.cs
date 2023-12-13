@@ -13,6 +13,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
         //yemek
         //ogrenci
         //personel
+        
         public DateTime Tarih { get; set; }
         public int Adet { get; set; }
         public decimal Fiyat { get; set; }
