@@ -10,9 +10,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
     {
         [Key]
         public int SatisID { get; set; }
-        //yemek
-        //ogrenci
-        //personel
+       
         public DateTime Tarih { get; set; }
         public int Adet { get; set; }
         public decimal Fiyat { get; set; }
