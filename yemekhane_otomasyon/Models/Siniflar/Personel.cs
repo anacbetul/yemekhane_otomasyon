@@ -20,7 +20,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
         [StringLength(30)]
         public string PersonelSoyad { get; set; }
 
-        public SatisHareket SatisHareket { get; set; }
+        public ICollection<SatisHareket> SatisHarekets { get; set; }
 
         public Departman Departman { get; set; }
 

@@ -19,7 +19,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public decimal Fiyat { get; set; }
         public bool Durum { get; set; }
         public YemekTur YemekTur { get; set; }
-        public SatisHareket SatisHareket { get; set; }
+        public ICollection<SatisHareket> SatisHarekets { get; set; }
 
     }
 }
