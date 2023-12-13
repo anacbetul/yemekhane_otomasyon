@@ -9,6 +9,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
 {
     public class Ogrenci
     {
+        //test
         [Key]
         public int OgrenciID { get; set; }
 
