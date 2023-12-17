@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace yemekhane_otomasyon.Controllers
 {
-    public class UrunController : Controller
+    public class YemeklerController : Controller
     {
-        // GET: Urun
+        // GET: Yemekler
         public ActionResult Index()
         {
             return View();
