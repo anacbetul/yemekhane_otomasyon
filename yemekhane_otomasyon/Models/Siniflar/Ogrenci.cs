@@ -9,6 +9,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
 {
     public class Ogrenci
     {
+        //testaSs
         [Key]
         public int OgrenciID { get; set; }
 
@@ -28,7 +29,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public string OgrenciMail{ get; set; }
-       
-        public SatisHareket SatisHareket { get; set; }
+
+        public ICollection<SatisHareket> SatisHarekets { get; set; }
     }
 }

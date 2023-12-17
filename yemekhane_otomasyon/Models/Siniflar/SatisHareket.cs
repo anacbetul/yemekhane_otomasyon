@@ -13,13 +13,14 @@ namespace yemekhane_otomasyon.Models.Siniflar
         //yemek
         //ogrenci
         //personel
+        
         public DateTime Tarih { get; set; }
         public int Adet { get; set; }
         public decimal Fiyat { get; set; }
         public decimal ToplamFiyat { get; set; }
-        public ICollection<Yemekler> Yemeklers { get; set; }
-        public ICollection<Ogrenci> Ogrencis { get; set; }
-        public ICollection<Personel> Personels { get; set; }
+        public Yemekler Yemekler { get; set; }
+        public Ogrenci Ogrenci { get; set; }
+        public Personel Personel { get; set; }
 
     }
 }
