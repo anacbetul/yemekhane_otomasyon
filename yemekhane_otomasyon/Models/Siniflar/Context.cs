@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace yemekhane_otomasyon.Models.Siniflar
 {
-    int denee = 3;
+   
     public class Context : DbContext
     {
         public DbSet<Admin> Admins { get; set; }
