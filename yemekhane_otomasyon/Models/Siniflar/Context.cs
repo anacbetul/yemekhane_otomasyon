@@ -13,8 +13,8 @@ namespace yemekhane_otomasyon.Models.Siniflar
         
         public DbSet<Fatura> Faturas { get; set; }
        
-        public DbSet<Ogrenci> Ogrencis { get; set; }
-       
+        public DbSet<Ogrenci> Ogrencis { get; set; } 
+
         public DbSet<SatisHareket> SatisHarekets { get; set; }
         public DbSet<Yemekler> Yemeklers { get; set; }
         public DbSet<YemekTur> YemekTurs { get; set; }
