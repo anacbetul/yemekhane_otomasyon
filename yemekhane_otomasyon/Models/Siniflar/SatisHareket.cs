@@ -21,8 +21,5 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public ICollection<Fatura> Faturas { get; set; }
 
         public Admin Admin { get; set; }
-
-
-        public ICollection<Fatura> Faturas { get; set; }
     }
 }
