@@ -22,5 +22,6 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public Ogrenci Ogrenci { get; set; }
         public Personel Personel { get; set; }
 
+        public ICollection<Fatura> Faturas { get; set; }
     }
 }
