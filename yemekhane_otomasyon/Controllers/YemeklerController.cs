@@ -12,7 +12,6 @@ namespace yemekhane_otomasyon.Controllers
         public ActionResult Index()
         {
 
-           // dsada
             return View();
         }
     }
