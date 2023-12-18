@@ -134,12 +134,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
     <Compile Include="Models\Siniflar\Context.cs" />
-    <Compile Include="Models\Siniflar\Departman.cs" />
     <Compile Include="Models\Siniflar\Fatura.cs" />
-    <Compile Include="Models\Siniflar\Giderler.cs" />
     <Compile Include="Models\Siniflar\YemekTur.cs" />
     <Compile Include="Models\Siniflar\Ogrenci.cs" />
-    <Compile Include="Models\Siniflar\Personel.cs" />
     <Compile Include="Models\Siniflar\SatisHareket.cs" />
     <Compile Include="Models\Siniflar\Yemekler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

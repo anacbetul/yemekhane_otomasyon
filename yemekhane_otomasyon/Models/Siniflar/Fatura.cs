@@ -22,6 +22,8 @@ namespace yemekhane_otomasyon.Models.Siniflar
 
         public DateTime Tarih { get; set; }
         public DateTime Saat { get; set; }
+
+        public SatisHareket SatisHareket { get; set; }
     }
     
 }

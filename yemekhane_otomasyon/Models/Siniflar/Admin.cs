@@ -22,6 +22,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
 
         [Column(TypeName = "Varchar")]
         [StringLength(1)]
-        public string Yetki { get; set; }
+
+        public ICollection<SatisHareket> SatisHarekets { get; set; }
     }
 }
