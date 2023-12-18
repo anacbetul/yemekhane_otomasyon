@@ -11,6 +11,8 @@ namespace yemekhane_otomasyon.Controllers
         // GET: Yemekler
         public ActionResult Index()
         {
+
+           // dsada
             return View();
         }
     }
