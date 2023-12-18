@@ -9,6 +9,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
 {
     public class Admin
     {
+
         [Key]
         public int AdminId { get; set; }
 

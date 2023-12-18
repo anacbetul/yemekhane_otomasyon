@@ -10,7 +10,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
     {
         [Key]
         public int SatisID { get; set; }
-       
+
         public DateTime Tarih { get; set; }
         public int Adet { get; set; }
         public decimal Fiyat { get; set; }
@@ -23,5 +23,6 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public Admin Admin { get; set; }
 
 
+        public ICollection<Fatura> Faturas { get; set; }
     }
 }
