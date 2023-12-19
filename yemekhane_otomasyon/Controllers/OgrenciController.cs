@@ -16,5 +16,17 @@ namespace yemekhane_otomasyon.Controllers
             var degerler=c.Ogrencis.ToList();
             return View(degerler);
         }
+        [HttpGet]
+        public ActionResult OgrenciEkle()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult OgrenciEkle(Ogrenci o)
+        {
+            c.Ogrencis.Add(o);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

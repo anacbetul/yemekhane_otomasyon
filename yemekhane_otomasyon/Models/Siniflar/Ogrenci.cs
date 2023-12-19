@@ -22,6 +22,10 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public string OgrenciSoyad{ get; set; }
 
         [Column(TypeName = "Varchar")]
+        [StringLength(30)]
+        public string Şifre { get; set; }
+
+        [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public string OgrenciTc{ get; set; }
 
