@@ -14,19 +14,23 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public int OgrenciID { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(30,ErrorMessage ="En fazla 30 karakter girebilirsiniz.")]
+        //[Required(ErrorMessage = "Bu alanı boş geçemezsiniz")]
         public string OgrenciAd { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(30,ErrorMessage = "En fazla 30 karakter girebilirsiniz.")]
+      // [Required(ErrorMessage ="Bu alanı boş geçemezsiniz")]
         public string OgrenciSoyad{ get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "En fazla 30 karakter girebilirsiniz.")]
+       // [Required(ErrorMessage = "Bu alanı boş geçemezsiniz")]
         public string Şifre { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "En fazla 50 karakter girebilirsiniz.")]
+        //[Required(ErrorMessage = "Bu alanı boş geçemezsiniz")]
         public string OgrenciTc{ get; set; }
 
         public bool YemekDurum { get; set; }
