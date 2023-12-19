@@ -17,6 +17,8 @@
         <td>YEMEK ADI</td>
         <td>YEMEK STOK</td>
         <td>FİYAT</td>
+        <td>SİL</td>
+        <td>GÜNCELLE</td>
     </tr>
     @foreach (var u in Model)
     {
@@ -38,6 +40,12 @@
             <td>@u.YemekAd</td>
             <td>@u.YemekStok</td>
             <td>@u.Fiyat</td>
+            <td>
+                <a href="/Yemekler/YemekSil/@u.YemekId" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Yemekler/YemekGetir/@u.YemekId" class="btn btn-success">Güncelle</a>
+            </td>
         </tr>
     }
 </table>

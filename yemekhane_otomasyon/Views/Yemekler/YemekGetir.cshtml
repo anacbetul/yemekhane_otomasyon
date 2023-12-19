@@ -1,13 +1,12 @@
 ﻿@model yemekhane_otomasyon.Models.Siniflar.Yemekler
 @{
-    ViewBag.Title = "YeniYemek";
+    ViewBag.Title = "YemekGetir";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
-
 <br />
-<h2>Yeni Yemek Ekleme</h2>
+<h2>Yemek Güncelleme Sayfası</h2>
 <br />
-<form class="form-group" method="post">
+@using (Html.BeginForm("YemekGuncelle", "Yemek", FormMethod.Post)) {
     @Html.LabelFor(x => x.YemekAd)
     @Html.TextBoxFor(x => x.YemekAd, new { @class = "form-control" })
     <br />
@@ -25,5 +24,6 @@
     @Html.LabelFor(x => x.Durum)
     @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
     <br />
-    <button class="btn btn-primary">Kaydet</button>
-</form>
+    <button class="btn btn-warning">Güncelle</button>
+
+}
