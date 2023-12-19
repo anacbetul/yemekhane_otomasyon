@@ -450,6 +450,7 @@
     <Content Include="thumber\scss\_site-blocks.scss" />
     <Content Include="thumber\scss\_site-navbar.scss" />
     <Content Include="Views\Yemekler\YeniYemek.cshtml" />
+    <Content Include="Views\Ogrenci\OgrenciEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
