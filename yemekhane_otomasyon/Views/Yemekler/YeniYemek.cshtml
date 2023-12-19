@@ -4,5 +4,11 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>YeniYemek</h2>
+<br />
+<h2>Yeni Yemek Ekleme</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.YemekAd)
+    @Html.LabelFor(x => x.YemekAd, new { @class = "form-control" })
 
+</form>
