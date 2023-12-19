@@ -28,5 +28,13 @@ namespace yemekhane_otomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        //public ActionResult OgrenciSil(int id)
+        //{
+        //    var ogrenci = c.Ogrencis.Find(id);
+        //    c.Ogrencis.Remove(ogrenci);
+        //    c.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}   
     }
 }
