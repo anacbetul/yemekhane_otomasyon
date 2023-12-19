@@ -9,6 +9,16 @@
 <br />
 <form class="form-group" method="post">
     @Html.LabelFor(x => x.YemekAd)
-    @Html.LabelFor(x => x.YemekAd, new { @class = "form-control" })
-
+    @Html.TextBoxFor(x => x.YemekAd, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.YemekStok)
+    @Html.TextBoxFor(x => x.YemekStok, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Fiyat)
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.YemekTur.YemekTurAd)
+    @Html.TextBoxFor(x => x.YemekTur.YemekTurAd, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
 </form>

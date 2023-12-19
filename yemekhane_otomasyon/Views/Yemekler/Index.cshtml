@@ -21,9 +21,19 @@
     @foreach (var u in Model)
     {
         <tr>
+            <td>
+                @if (u.YemekTur != null)
+                {
+                    @u.YemekTur.YemekTurID
+                }
+            </td>
+            <td>
+                @if (u.YemekTur != null)
+                {
+                    @u.YemekTur.YemekTurAd
+                }
+            </td>
 
-            <td>@u.YemekTur.YemekTurID</td>
-            <td>@u.YemekTur.YemekTurAd</td>
             <td>@u.YemekId</td>
             <td>@u.YemekAd</td>
             <td>@u.YemekStok</td>
@@ -31,4 +41,6 @@
         </tr>
     }
 </table>
+
+
 <a href="/Yemekler/YeniYemek/" class="btn btn-info">Yeni Yemek</a>
