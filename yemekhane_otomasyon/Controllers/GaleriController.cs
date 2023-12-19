@@ -11,6 +11,7 @@ namespace yemekhane_otomasyon.Controllers
         // GET: Galeri
         public ActionResult Index()
         {
+            //deneme
             return View();
         }
     }
