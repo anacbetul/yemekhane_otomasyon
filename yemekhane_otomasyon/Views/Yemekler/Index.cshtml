@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@using yemekhane_otomasyon.Models.Siniflar;
+@model List<Yemekler>
+<br/>
+
+<h2>Gunun Yemek Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>YEMEK ADI</td>
+        <td>YEMEK STOK</td>
+        <td>FİYAT</td>
+        <td>YEMEK TUR</td>
+    </tr>
+   @foreach(var u in Model)
+    {
+       <tr>
+          
+           <td>@u.YemekAd</td>
+           <td>@u.YemekStok</td>
+           <td>@u.Fiyat</td>
+           <td>@u.YemekTur.YemekTurAd</td>
+       </tr>
+    }
+</table>
+

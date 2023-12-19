@@ -17,8 +17,8 @@ namespace yemekhane_otomasyon.Models.Siniflar
 
         public short YemekStok { get; set; }
         public decimal Fiyat { get; set; }
-        public bool Durum { get; set; }
-        public YemekTur YemekTur { get; set; }
+        //public bool Durum { get; set; } Değiştirilicek
+        public virtual YemekTur YemekTur { get; set; }  
         public ICollection<SatisHareket> SatisHarekets { get; set; }
 
     }
