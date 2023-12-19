@@ -1,8 +1,40 @@
-﻿
+﻿@model yemekhane_otomasyon.Models.Siniflar.Ogrenci
 @{
     ViewBag.Title = "OgrenciGetir";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>OgrenciGetir</h2>
+<br />
 
+
+<h2>Öğrenci Güncelleme Sayfası</h2>
+
+
+<br />
+
+@using (Html.BeginForm("OgrenciGuncelle", "Ogrenci", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.OgrenciID)
+        @Html.LabelFor(x => x.OgrenciAd)
+        @Html.TextBoxFor(x => x.OgrenciAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.OgrenciAd, "", new { @style = "color:red" })
+        <br />
+        @Html.LabelFor(x => x.OgrenciSoyad)
+        @Html.TextBoxFor(x => x.OgrenciSoyad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.OgrenciSoyad, "", new { @style = "color:red" })
+        <br />
+        @Html.LabelFor(x => x.OgrenciTc)
+        @Html.TextBoxFor(x => x.OgrenciTc, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.OgrenciTc, "", new { @style = "color:red" })
+        <br />
+        @Html.LabelFor(x => x.Şifre)
+        @Html.TextBoxFor(x => x.Şifre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Şifre, "", new { @style = "color:red" })
+        <br />
+        <button class="btn btn-default" style="background-color:cadetblue">Kaydet</button>
+
+    </div>
+
+
+}

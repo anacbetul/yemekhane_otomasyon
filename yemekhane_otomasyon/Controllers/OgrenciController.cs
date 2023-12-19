@@ -24,6 +24,10 @@ namespace yemekhane_otomasyon.Controllers
         [HttpPost]
         public ActionResult OgrenciEkle(Ogrenci o)
         {
+            if(!ModelState.IsValid)
+            {
+                return View("OgrenciEkle");
+            }
             o.Durum = true;
             c.Ogrencis.Add(o);
             c.SaveChanges();
@@ -44,9 +48,19 @@ namespace yemekhane_otomasyon.Controllers
             return View("OgrenciGetir",ogrenci);
         }
         
-
-       
-
+       public ActionResult OgrenciGuncelle(Ogrenci o)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("OgrenciGetir");
+            }
+            var ogr = c.Ogrencis.Find(o.OgrenciID);
+            ogr.OgrenciAd = o.OgrenciAd;
+            ogr.OgrenciSoyad = o.OgrenciSoyad;
+            ogr.OgrenciTc = o.OgrenciTc;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
        
     }
 }
