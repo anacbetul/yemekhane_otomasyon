@@ -26,11 +26,11 @@
                 <td>@i.OgrenciSoyad</td>
                 <td>@i.OgrenciTc</td>
 
-                @*<td><a href="/Ogrenci/OgrenciSil/i.OgrenciID" class="btn btn-danger style="background-color:lightcoral">">Sil</a></td>*@
-                <td><a href="#" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Ogrenci/OgrenciSil/@i.OgrenciID" class="btn btn-danger" style="background-color:lightcoral">Sil</a></td>
+                <td><a href="/Ogrenci/OgrenciDuzenle/@i.OgrenciID" class="btn btn-warning">Güncelle</a></td>
 
 
             </tr>
             }
 </table>
-@*<a href="/Ogrenci/YeniOgrenci" class="btn btn-info">Yeni öğrenci ekle</a>*@
+<a href="/Ogrenci/OgrenciEkle" class="btn btn-info">Yeni öğrenci ekle</a>
