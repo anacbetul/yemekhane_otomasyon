@@ -13,7 +13,7 @@ namespace yemekhane_otomasyon.Controllers
         Context c= new Context();
         public ActionResult Index()
         {
-            var degerler=c.Ogrencis.ToList();
+            var degerler=c.Ogrencis.Where(x=>x.Durum==true).ToList();
             return View(degerler);
         }
         [HttpGet]
@@ -24,17 +24,29 @@ namespace yemekhane_otomasyon.Controllers
         [HttpPost]
         public ActionResult OgrenciEkle(Ogrenci o)
         {
+            o.Durum = true;
             c.Ogrencis.Add(o);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        //public ActionResult OgrenciSil(int id)
-        //{
-        //    var ogrenci = c.Ogrencis.Find(id);
-        //    c.Ogrencis.Remove(ogrenci);
-        //    c.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}   
+        public  ActionResult OgrenciSil(int id)
+        {
+            var ogrenci = c.Ogrencis.Find(id);
+            ogrenci.Durum = false;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult OgrenciGetir(int id)
+        {
+            var ogrenci = c.Ogrencis.Find(id);
+            return View("OgrenciGetir",ogrenci);
+        }
+        
+
+       
+
+       
     }
 }

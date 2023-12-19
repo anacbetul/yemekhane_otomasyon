@@ -30,6 +30,8 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public string OgrenciTc{ get; set; }
 
         public bool YemekDurum { get; set; }
+
+        public bool Durum { get; set; }
         public ICollection<SatisHareket> SatisHarekets { get; set; }
     }
 }
