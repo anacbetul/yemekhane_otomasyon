@@ -5,26 +5,30 @@
 }
 @using yemekhane_otomasyon.Models.Siniflar;
 @model List<Yemekler>
-<br/>
+<br />
 
-<h2>Gunun Yemek Listesi</h2>
+<h2>Yemek Listesi</h2>
 
 <table class="table table-bordered">
     <tr>
+        <td>YEMEK TUR ID</td>
+        <td>YEMEK TUR</td>
+        <td>YEMEK ID</td>
         <td>YEMEK ADI</td>
         <td>YEMEK STOK</td>
         <td>FİYAT</td>
-        <td>YEMEK TUR</td>
     </tr>
-   @foreach(var u in Model)
+    @foreach (var u in Model)
     {
-       <tr>
-          
-           <td>@u.YemekAd</td>
-           <td>@u.YemekStok</td>
-           <td>@u.Fiyat</td>
-           <td>@u.YemekTur.YemekTurAd</td>
-       </tr>
+        <tr>
+
+            <td>@u.YemekTur.YemekTurID</td>
+            <td>@u.YemekTur.YemekTurAd</td>
+            <td>@u.YemekId</td>
+            <td>@u.YemekAd</td>
+            <td>@u.YemekStok</td>
+            <td>@u.Fiyat</td>
+        </tr>
     }
 </table>
-
+<button class="btn btn-primary">Yeni yemek</button>

@@ -1,14 +1,19 @@
 ﻿@using yemekhane_otomasyon.Models.Siniflar
 @model List<YemekTur>
+    <br/>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<table class=" table-bordered" style="margin-top:20px" width="950px">
+<table class="table table-bordered" style="margin-top:20px" width="950px">
     <tr>
-        <th>ID</th>
+        <th>Yemek Tür ID</th>
         <th>Yemek Türleri</th>
+        <th>Yemek Adı ID</th>
+        <th>Yemek Adı</th>
+        <th>Yemek Stok</th>
+        <th>Yemek Fiyat</th>
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
@@ -18,12 +23,24 @@
             <td>
                 @k.YemekTurID
             </td>
-            <td>
+            <td> 
                 @k.YemekTurAd
+            </td>
+            <td>
+                @k.Yemeklers.YemekAd
+            </td>
+            <td>
+               
+            </td>
+            <td>
+            </td>
+            <td>
+               
             </td>
             <td><a href="#" class="btn btn-danger">Sil</a></td>
             <td><a href="#" class="btn btn-success">Güncelle</a></td>
+
         </tr>
-    }
+     }
 </table>
 <button class="btn btn-primary" >Yeni yemek türü oluştur</button>
