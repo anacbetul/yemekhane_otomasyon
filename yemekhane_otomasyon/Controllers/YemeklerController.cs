@@ -11,12 +11,24 @@ namespace yemekhane_otomasyon.Controllers
     {
         // GET: Yemekler
 
-        Context a = new Context();
+        Context c = new Context();
         public ActionResult Index()
         {
-            var urunler = a.Yemeklers.ToList();
+            var urunler = c.Yemeklers.ToList();
             return View(urunler);
         }
-        
+        [HttpGet]
+        public ActionResult YeniYemek()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniYemek(Yemekler y)
+        {  
+            c.Yemeklers.Add(y);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
