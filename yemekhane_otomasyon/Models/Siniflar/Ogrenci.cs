@@ -22,7 +22,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public string OgrenciSoyad{ get; set; }
 
 
-        [Column(TypeName = "Varchar")]
+        [Column(TypeName = "Varchar")]  
         [StringLength(250)]
         public string OgrenciGorsel{ get; set; }
 
