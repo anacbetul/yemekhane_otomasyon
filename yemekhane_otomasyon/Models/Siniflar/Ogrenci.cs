@@ -20,12 +20,12 @@ namespace yemekhane_otomasyon.Models.Siniflar
 
         [Column(TypeName = "Varchar")]
         [StringLength(30,ErrorMessage = "En fazla 30 karakter girebilirsiniz.")]
-      // [Required(ErrorMessage ="Bu alanı boş geçemezsiniz")]
+        //[Required(ErrorMessage ="Bu alanı boş geçemezsiniz")]
         public string OgrenciSoyad{ get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(30, ErrorMessage = "En fazla 30 karakter girebilirsiniz.")]
-       // [Required(ErrorMessage = "Bu alanı boş geçemezsiniz")]
+        //[Required(ErrorMessage = "Bu alanı boş geçemezsiniz")]
         public string Şifre { get; set; }
 
         [Column(TypeName = "Varchar")]
