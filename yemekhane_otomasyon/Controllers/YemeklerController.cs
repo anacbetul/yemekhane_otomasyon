@@ -60,5 +60,15 @@ namespace yemekhane_otomasyon.Controllers
             var yemekdeger = c.Yemeklers.Find(id);
             return View("YemekGetir", yemekdeger);
         }
+        public ActionResult YemekGuncelle(Yemekler a)
+        {
+            var urn = c.Yemeklers.Find(a.YemekId);
+            urn.YemekAd = a.YemekAd;
+            urn.YemekStok = a.YemekStok;
+            urn.Fiyat = a.Fiyat;
+            urn.YemekTurId = a.YemekTurId;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

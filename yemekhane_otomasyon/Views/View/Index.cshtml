@@ -1,0 +1,60 @@
+﻿<br />
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@model List<yemekhane_otomasyon.Models.ViewModels.YemekViewModel>
+
+<h2>HAFTALIK MENÜ</h2>
+<table class="table table-bordered" style="margin-top:20px" width="950px">
+    <tr>
+        <th>Günler</th>
+        <th>Yemek Adı ID</th>
+        <th>Yemek Adı</th>
+        <th>Yemek Fiyat</th>
+        <th>Yemek Adı ID</th>
+        <th>Yemek Adı</th>
+        <th>Yemek Fiyat</th>
+        <th>Yemek Adı ID</th>
+        <th>Yemek Adı</th>
+        <th>Yemek Fiyat</th>
+        <th>Yemek Adı ID</th>
+        <th>Yemek Adı</th>
+        <th>Yemek Fiyat</th>
+    </tr>
+
+    @foreach (var menu in Model)
+    {
+        <tr>
+            <th colspan="(@menu.YemeklerListesi.Count + 1)">@menu.GunAdi</th>
+
+            @foreach (var yemek in menu.YemeklerListesi)
+            {
+
+                <td>
+                    @if (yemek.Durum != false)
+                    {
+                        @yemek.YemekId
+                    }
+
+                </td>
+                <td>
+                    @if (yemek.Durum != false)
+                    {
+                        @yemek.YemekAd
+                    }
+                </td>
+                <td>
+                    @if (yemek.Durum != false)
+                    {
+                        @yemek.Fiyat
+                    }
+                </td>
+
+            }
+        </tr>
+    }
+</table>
+
+

@@ -6,7 +6,9 @@
 <br />
 <h2>Yemek Güncelleme Sayfası</h2>
 <br />
-@using (Html.BeginForm("YemekGuncelle", "Yemek", FormMethod.Post)) {
+@using (Html.BeginForm("YemekGuncelle", "Yemekler", FormMethod.Post)) 
+{
+    @Html.HiddenFor(x=>x.YemekId)
     @Html.LabelFor(x => x.YemekAd)
     @Html.TextBoxFor(x => x.YemekAd, new { @class = "form-control" })
     <br />

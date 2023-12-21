@@ -26,7 +26,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
 
         [Column(TypeName = "Varchar")]
         [StringLength(30, ErrorMessage = "En fazla 30 karakter girebilirsiniz.")]
-        //[Required(ErrorMessage = "Name is required")]
+       // [Required(ErrorMessage = "Bu alanı boş geçemezsiniz")]
         public string Şifre { get; set; }
 
         [Column(TypeName = "Varchar")]
