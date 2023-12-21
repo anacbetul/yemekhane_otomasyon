@@ -237,6 +237,15 @@
     <Content Include="thumber\js\swiper.min.js" />
     <Content Include="thumber\js\typed.js" />
     <Content Include="thumber\photos.html" />
+    <Content Include="weblogintema\weblogin\css\font-awesome.css" />
+    <Content Include="weblogintema\weblogin\css\popup-box.css" />
+    <Content Include="weblogintema\weblogin\css\style.css" />
+    <Content Include="weblogintema\weblogin\fonts\fontawesome-webfont.svg" />
+    <Content Include="weblogintema\weblogin\images\bg.jpg" />
+    <Content Include="weblogintema\weblogin\index.html" />
+    <Content Include="weblogintema\weblogin\js\jquery-2.1.4.min.js" />
+    <Content Include="weblogintema\weblogin\js\jquery.magnific-popup.js" />
+    <Content Include="weblogintema\weblogin\w3layouts-License.txt" />
     <Content Include="Web\dist\401.html" />
     <Content Include="Web\dist\404.html" />
     <Content Include="Web\dist\500.html" />
@@ -459,6 +468,11 @@
     <Content Include="Views\Yemekler\YemekGetir.cshtml" />
     <Content Include="Views\View\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="weblogintema\weblogin\fonts\fontawesome-webfont.eot" />
+    <Content Include="weblogintema\weblogin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="weblogintema\weblogin\fonts\fontawesome-webfont.woff" />
+    <Content Include="weblogintema\weblogin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="weblogintema\weblogin\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
