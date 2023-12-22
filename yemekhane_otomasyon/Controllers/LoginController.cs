@@ -14,10 +14,10 @@ namespace yemekhane_otomasyon.Controllers
             return View();
         }
 
-        //public PartialViewResult Partial2()
-        //{
-        //    //view eklenecek
-        //    return PartialView();
-        //}
+        public PartialViewResult Partial2()
+        {
+            //view eklenecek
+            return PartialView();
+        }
     }
 }
