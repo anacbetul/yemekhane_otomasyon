@@ -10,7 +10,6 @@
 <table class="table table-striped">
 
     <tr>
-        <th>Ogrenci Id</th>
         <th>Ad</th>
         <th>Soyad</th>
         <th>TC</th>
@@ -20,15 +19,12 @@
     @foreach(var i in Model)
             {
             <tr>
-                <td>@i.OgrenciID</td>
                 <td>@i.OgrenciAd</td>
                 <td>@i.OgrenciSoyad</td>
                 <td>@i.OgrenciTc</td>
 
                 <td><a href="/Ogrenci/OgrenciSil/@i.OgrenciID" class="btn btn-danger" style="background-color:lightcoral">Sil</a></td>
                 <td><a href="/Ogrenci/OgrenciGetir/@i.OgrenciID" class="btn btn-warning">Güncelle</a></td>
-
-
             </tr>
             }
 </table>

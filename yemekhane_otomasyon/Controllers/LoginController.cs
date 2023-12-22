@@ -32,7 +32,7 @@ namespace yemekhane_otomasyon.Controllers
             {
                 FormsAuthentication.SetAuthCookie(bilgiler.OgrenciTc, false);
                 Session["OgrenciTc"] = bilgiler.OgrenciTc.ToString();
-                return RedirectToAction("Index", "Satis");
+                return RedirectToAction("Index", "Yemekler");
             }
             else 
             {
