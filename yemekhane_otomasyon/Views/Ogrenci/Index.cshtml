@@ -1,5 +1,7 @@
 ﻿@using yemekhane_otomasyon.Models.Siniflar;
-@model  List<Ogrenci>
+@using PagedList;
+@using PagedList.Mvc;
+@model  PagedList.IPagedList<yemekhane_otomasyon.Models.Siniflar.Ogrenci>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
@@ -28,4 +30,5 @@
             </tr>
             }
 </table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
 <a href="/Ogrenci/OgrenciEkle" class="btn btn-info">Yeni öğrenci ekle</a>

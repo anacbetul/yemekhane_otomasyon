@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using yemekhane_otomasyon.Models.Siniflar;
+using PagedList;
+using PagedList.Mvc;
 
 namespace yemekhane_otomasyon.Controllers
 {
@@ -11,9 +13,9 @@ namespace yemekhane_otomasyon.Controllers
     {
         // GET: Ogrenci
         Context c= new Context();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa=1)
         {
-            var degerler=c.Ogrencis.Where(x=>x.Durum==true).ToList();
+            var degerler=c.Ogrencis.Where(x=>x.Durum==true).ToList().ToPagedList(sayfa,8);
             return View(degerler);
         }
         [HttpGet]
