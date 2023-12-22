@@ -15,7 +15,6 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public int Adet { get; set; }
         public decimal Fiyat { get; set; }
         public decimal ToplamFiyat { get; set; }
-        public bool Durum { get; set; }
         public Yemekler Yemekler { get; set; }
         public Ogrenci Ogrenci { get; set; }
       
