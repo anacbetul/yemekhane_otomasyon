@@ -40,5 +40,27 @@ namespace yemekhane_otomasyon.Controllers
             }
             
         }
+
+        [HttpGet]
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AdminLogin(Admin a)
+        {
+            var bilgiler=c.Admins.FirstOrDefault(x => x.AdminTC == a.AdminTC && x.AdminSifre == a.AdminSifre);
+            if(bilgiler != null)
+            {
+                FormsAuthentication.SetAuthCookie(bilgiler.AdminTC.ToString(), false);
+                Session["AdminTC"] = bilgiler.AdminTC.ToString();
+                return RedirectToAction("Index", "Ogrenci");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
     }
 }
