@@ -473,6 +473,7 @@
     <Content Include="weblogintema\weblogin\fonts\fontawesome-webfont.woff" />
     <Content Include="weblogintema\weblogin\fonts\fontawesome-webfont.woff2" />
     <Content Include="weblogintema\weblogin\fonts\FontAwesome.otf" />
+    <Content Include="Views\Login\Partial2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
