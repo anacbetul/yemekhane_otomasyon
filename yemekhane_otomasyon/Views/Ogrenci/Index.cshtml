@@ -1,14 +1,21 @@
 ﻿@using yemekhane_otomasyon.Models.Siniflar;
-@using PagedList;
-@using PagedList.Mvc;
-@model  PagedList.IPagedList<yemekhane_otomasyon.Models.Siniflar.Ogrenci>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
 <br/>
+@using (Html.BeginForm("Index", "Ogrenci", FormMethod.Get))
+            {
+                <p>
 
+                    Öğrenci Adı: @Html.TextBox("p")
+                       <input type="submit" value="Ara" class="btn btn-info" />
+                </p>
+            }
+
+<br/>
 <table class="table table-striped">
 
     <tr>
@@ -18,8 +25,8 @@
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
-    @foreach(var i in Model)
-            {
+    @foreach (var i in Model)
+    {
             <tr>
                 <td>@i.OgrenciAd</td>
                 <td>@i.OgrenciSoyad</td>
@@ -28,7 +35,7 @@
                 <td><a href="/Ogrenci/OgrenciSil/@i.OgrenciID" class="btn btn-danger" style="background-color:lightcoral">Sil</a></td>
                 <td><a href="/Ogrenci/OgrenciGetir/@i.OgrenciID" class="btn btn-warning">Güncelle</a></td>
             </tr>
-            }
+        }
 </table>
-@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+
 <a href="/Ogrenci/OgrenciEkle" class="btn btn-info">Yeni öğrenci ekle</a>

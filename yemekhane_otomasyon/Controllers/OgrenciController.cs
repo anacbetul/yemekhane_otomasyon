@@ -13,10 +13,14 @@ namespace yemekhane_otomasyon.Controllers
     {
         // GET: Ogrenci
         Context c= new Context();
-        public ActionResult Index(int sayfa=1)
+        public ActionResult Index(string p) 
         {
-            var degerler=c.Ogrencis.Where(x=>x.Durum==true).ToList().ToPagedList(sayfa,8);
-            return View(degerler);
+            var ogrenciler = from d in c.Ogrencis select d;
+            if (!string.IsNullOrEmpty(p))
+            {
+                ogrenciler = ogrenciler.Where(m => m.OgrenciAd.Contains(p));
+            }
+            return View(ogrenciler.ToList());
         }
         [HttpGet]
         public ActionResult OgrenciEkle()
