@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using yemekhane_otomasyon.Models.Siniflar;
+using PagedList;
+using PagedList.Mvc;
+using System.IO;
 
 namespace yemekhane_otomasyon.Controllers
 {
@@ -11,10 +14,14 @@ namespace yemekhane_otomasyon.Controllers
     {
         // GET: Ogrenci
         Context c= new Context();
-        public ActionResult Index()
+        public ActionResult Index(string p) 
         {
-            var degerler=c.Ogrencis.Where(x=>x.Durum==true).ToList();
-            return View(degerler);
+            var ogrenciler = from d in c.Ogrencis select d;
+            if (!string.IsNullOrEmpty(p))
+            {
+                ogrenciler = ogrenciler.Where(m => m.OgrenciAd.ToLower().Contains(p));
+            }
+            return View(ogrenciler.ToList());
         }
         [HttpGet]
         public ActionResult OgrenciEkle()
@@ -27,6 +34,12 @@ namespace yemekhane_otomasyon.Controllers
             if(!ModelState.IsValid)
             {
                 return View("OgrenciEkle");
+            }
+            if (Request.Files.Count>0)
+            {
+                string dosyaadi= Path.GetFileName(Request.Files[0].FileName);
+                string uzanti = Path.GetExtension(Request.Files[0].FileName);
+                string yol = "~/Image/" + dosyaadi + uzanti;
             }
             o.Durum = true;
             c.Ogrencis.Add(o);
