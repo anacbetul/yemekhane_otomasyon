@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using yemekhane_otomasyon.Models.Siniflar;
 
@@ -57,6 +56,5 @@ namespace yemekhane_otomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-
     }
 }
