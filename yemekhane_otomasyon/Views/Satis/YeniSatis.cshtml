@@ -14,7 +14,7 @@
     @Html.DropDownListFor(x => x.Yemekler.YemekId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
     <br />
     @Html.Label("Öğrenci")
-    @Html.DropDownListFor(x => x.Ogrenci.OgrenciID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.Ogrenci.OgrenciAd, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
     <br />
     @Html.LabelFor(x=>x.Admin)
     @Html.DropDownListFor(x => x.Admin.AdminId, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
