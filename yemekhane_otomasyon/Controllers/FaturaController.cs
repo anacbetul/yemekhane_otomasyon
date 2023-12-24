@@ -31,5 +31,10 @@ namespace yemekhane_otomasyon.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult FaturaGetir(int id)
+        {
+            var ftr = c.Faturas.Find(id);
+            return View("FaturaGetir", ftr);
+        }
     }
 }
