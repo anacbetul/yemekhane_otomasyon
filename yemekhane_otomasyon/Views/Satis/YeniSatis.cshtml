@@ -1,9 +1,8 @@
-﻿@model yemekhane_otomasyon.Models.Siniflar.SatisHareket
-
-@{
+﻿@{
     ViewBag.Title = "YeniSatis";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
+@model yemekhane_otomasyon.Models.Siniflar.SatisHareket
 
 <br />
 <h2>Yeni Satış Sayfası</h2>
@@ -11,13 +10,13 @@
 <form class="form-group" method="post">
 
     @Html.LabelFor(x => x.Yemekler)
-    @Html.DropDownListFor(x => x.Yemekler.YemekId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.Yemekler.YemekTurId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
     <br />
     @Html.Label("Öğrenci")
     @Html.DropDownListFor(x => x.Ogrenci.OgrenciID, (List<SelectListItem>)ViewBag.dgr2, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x=>x.Admin)
-    @Html.DropDownListFor(x => x.Admin.AdminId, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+    @*@Html.LabelFor(x => x.Admin)
+    @Html.DropDownListFor(x => x.Admin.AdminId, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })*@
     <br />
     @Html.LabelFor(x => x.Adet)
     @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })

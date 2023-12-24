@@ -25,7 +25,7 @@ namespace yemekhane_otomasyon.Models.Siniflar
 
         public decimal Toplam { get; set; }
 
-        public SatisHareket SatisHareket { get; set; }
+        //public SatisHareket SatisHareket { get; set; }
     }
     
 }

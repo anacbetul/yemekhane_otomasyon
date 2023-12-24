@@ -25,6 +25,7 @@ namespace yemekhane_otomasyon.Controllers
                                                Value = x.YemekId.ToString(),
 
                                            }).ToList();
+            ViewBag.dgr1 = deger1;
 
             List<SelectListItem> deger2 = (from x in c.Ogrencis.ToList()
                                            select new SelectListItem
@@ -33,18 +34,17 @@ namespace yemekhane_otomasyon.Controllers
                                                Value = x.OgrenciID.ToString(),
 
                                            }).ToList();
-
-            List<SelectListItem> deger3 = (from x in c.Admins.ToList()
-                                           select new SelectListItem
-                                           {
-                                               Text = x.KullaniciAd,
-                                               Value = x.AdminId.ToString(),
-
-                                           }).ToList();
-
-            ViewBag.dgr1 = deger1;
             ViewBag.dgr2 = deger2;
-            ViewBag.dgr3 = deger3;
+
+            //List<SelectListItem> deger3 = (from x in c.Admins.ToList()
+            //                               select new SelectListItem
+            //                               {
+            //                                   Text = x.KullaniciAd,
+            //                                   Value = x.AdminId.ToString(),
+
+            //                               }).ToList();
+
+            //ViewBag.dgr3 = deger3;
             return View();
         }
 
