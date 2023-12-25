@@ -36,5 +36,16 @@ namespace yemekhane_otomasyon.Controllers
             var ftr = c.Faturas.Find(id);
             return View("FaturaGetir", ftr);
         }
+
+        public ActionResult FaturaGuncelle(Fatura f)
+        {
+            var ftr = c.Faturas.Find(f.FaturaID);
+            ftr.FaturaSeriNo = f.FaturaSeriNo;
+            ftr.FaturaSiraNo = f.FaturaSiraNo;     
+            ftr.Tarih = f.Tarih;
+            ftr.Toplam = f.Toplam;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

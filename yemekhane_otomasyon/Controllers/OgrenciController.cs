@@ -21,6 +21,7 @@ namespace yemekhane_otomasyon.Controllers
             {
                 ogrenciler = ogrenciler.Where(m => m.OgrenciAd.ToLower().Contains(p));
             }
+            ogrenciler = ogrenciler.Where(m => m.Durum == true);
             return View(ogrenciler.ToList());
         }
         [HttpGet]
