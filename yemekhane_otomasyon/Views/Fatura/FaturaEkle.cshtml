@@ -1,0 +1,31 @@
+﻿@model yemekhane_otomasyon.Models.Siniflar.Fatura
+@{
+    ViewBag.Title = "FaturaEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Yeni Fatura Ekle</h2>
+
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.FaturaSeriNo)
+    @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.FaturaSeriNo, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.FaturaSiraNo)
+    @Html.TextBoxFor(x => x.FaturaSiraNo, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.FaturaSiraNo, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Tarih, "", new { @style = "color:red" })
+    <br />
+
+
+
+    <button class=" btn btn-info">Kaydet</button>
+</form>
+

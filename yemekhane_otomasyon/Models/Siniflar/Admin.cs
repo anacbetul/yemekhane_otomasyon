@@ -12,6 +12,8 @@ namespace yemekhane_otomasyon.Models.Siniflar
 
         [Key]
         public int AdminId { get; set; }
+     
+        public int AdminTC { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(10)]
@@ -19,7 +21,8 @@ namespace yemekhane_otomasyon.Models.Siniflar
 
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
-        public string Sifre { get; set; }
+
+        public string AdminSifre { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(1)]

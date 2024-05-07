@@ -1,0 +1,62 @@
+﻿@using yemekhane_otomasyon.Models.Siniflar
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+
+<table class="table table-striped">
+
+    <tr>
+        <th>Satış Id</th>
+        <th>Yemek</th>
+        <th>Öğrenci</th>
+        <th>Admin</th>
+        <th>Adet</th>
+        <th>Fiyat</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+
+
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.SatisID</td>
+            <td>
+                @if (i.Yemekler != null)
+                {
+                    @i.Yemekler.YemekAd
+                }
+            </td>
+            <td>
+                @if (i.Ogrenci != null)
+                {
+                    @i.Ogrenci.OgrenciAd @i.Ogrenci.OgrenciSoyad
+                }
+            </td>
+            <td>
+                @if (i.Admin != null)
+                {
+                    @i.Admin.KullaniciAd
+                }
+            </td>
+            <td>@i.Adet</td>
+            <td>
+                @if (i.Yemekler != null)
+                {@i.Yemekler.Fiyat}
+            </td>
+            <td>@i.ToplamFiyat</td>
+            <td>@i.Tarih</td>
+
+
+        </tr>
+    }
+</table>
+<a href="/Satis/YeniSatis/" class="btn btn-info">Yeni satış yap</a>
+
+

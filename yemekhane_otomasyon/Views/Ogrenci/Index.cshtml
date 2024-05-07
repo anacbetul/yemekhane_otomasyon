@@ -1,0 +1,41 @@
+﻿@using yemekhane_otomasyon.Models.Siniflar;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br/>
+@using (Html.BeginForm("Index", "Ogrenci", FormMethod.Get))
+            {
+                <p>
+
+                    Öğrenci Adı: @Html.TextBox("p")
+                       <input type="submit" value="Ara" class="btn btn-info" />
+                </p>
+            }
+
+<br/>
+<table class="table table-striped">
+
+    <tr>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>TC</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+            <tr>
+                <td>@i.OgrenciAd</td>
+                <td>@i.OgrenciSoyad</td>
+                <td>@i.OgrenciTc</td>
+
+                <td><a href="/Ogrenci/OgrenciSil/@i.OgrenciID" class="btn btn-danger" style="background-color:lightcoral">Sil</a></td>
+                <td><a href="/Ogrenci/OgrenciGetir/@i.OgrenciID" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+</table>
+
+<a href="/Ogrenci/OgrenciEkle" class="btn btn-info">Yeni öğrenci ekle</a>

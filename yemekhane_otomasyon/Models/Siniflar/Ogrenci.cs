@@ -14,22 +14,29 @@ namespace yemekhane_otomasyon.Models.Siniflar
         public int OgrenciID { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(30,ErrorMessage ="En fazla 30 karakter girebilirsiniz.")]
+        //[Required(ErrorMessage = "Name is required")]
         public string OgrenciAd { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(30,ErrorMessage = "En fazla 30 karakter girebilirsiniz.")]
+        //[Required(ErrorMessage = "Name is required")]
+
         public string OgrenciSoyad{ get; set; }
 
+        [Column(TypeName = "Varchar")]
+        [StringLength(30, ErrorMessage = "En fazla 30 karakter girebilirsiniz.")]
+       // [Required(ErrorMessage = "Bu alanı boş geçemezsiniz")]
+        public string Şifre { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(250)]
-        public string OgrenciGorsel{ get; set; }
+        [StringLength(50, ErrorMessage = "En fazla 50 karakter girebilirsiniz.")]
+        //[Required(ErrorMessage = "Name is required")]
+        public string OgrenciTc{ get; set; }
 
-        [Column(TypeName = "Varchar")]
-        [StringLength(50)]
-        public string OgrenciMail{ get; set; }
+        public bool YemekDurum { get; set; }
 
+        public bool Durum { get; set; }
         public ICollection<SatisHareket> SatisHarekets { get; set; }
     }
 }

@@ -1,29 +1,40 @@
-﻿
+﻿@model yemekhane_otomasyon.Models.ViewModels.YemekViewModel
+
+<br />
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<table class=" table-bordered" style="margin-top:20px">
+@{
+    string[] gunler = { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
+}
+
+<table class="table table-bordered" style="margin-top:20px" width="950px">
     <tr>
-        <th>ID</th>
-        <th>Yemek Türlerix</th>
+        <th>Günler</th>
+        <th>Yemek Adı ID</th>
+        <th>Yemek Adı</th>
+        <th>Yemek Fiyat</th>
+        <th>İşlemler</th>
     </tr>
-    <tr>
-        <th>1</th>
-        <th>Çorbalar</th>
-    </tr>
-    <tr>
-        <th>2</th>
-        <th>Ana yemekler</th>
-    </tr>
-    <tr>
-        <th>3</th>
-        <th>Makarna ya da pilav </th>
-    </tr>
-    <tr>
-        <th>4</th>
-        <th>Tatlılar</th>
-    </tr>
+    @foreach (var day in gunler)
+    {
+        <tr>
+            <th rowspan="@(Model.YemeklerListesi.Count + 1)">@day</th>
+        </tr>
+        foreach (var k in Model.YemeklerListesi)
+        {
+            <tr>
+                <td>@k.YemekId</td>
+                <td>@k.YemekAd</td>
+                <td>@k.Fiyat</td>
+                <td>
+                    <a href="#" class="btn btn-danger">Sil</a>
+                    <a href="#" class="btn btn-success">Güncelle</a>
+                </td>
+            </tr>
+        }
+    }
+
 </table>
-<button class="btn btn-primary">Yeni yemek türü oluştur</button>

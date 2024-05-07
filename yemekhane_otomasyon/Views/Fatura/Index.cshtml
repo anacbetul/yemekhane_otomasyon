@@ -1,0 +1,40 @@
+﻿@using yemekhane_otomasyon.Models.Siniflar;
+@model List<Fatura>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:20px">
+    
+    <tr>
+        <th>FaturaID</th>
+        <th>FaturaSeriNo</th>
+        <th>FaturaSiraNo</th>
+        <th>Tarih</th>
+
+        <th>Toplam Fiyat </th>
+        <th>Güncelle</th>
+    </tr>
+
+@foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FaturaID</td>
+            <td>@item.FaturaSeriNo</td>
+            <td>@item.FaturaSiraNo</td>
+            <td>@item.Tarih</td>
+            <td>@item.Toplam</td>
+
+           <td><a href="/Fatura/FaturaGetir/@item.FaturaID" class="btn btn-warning">Güncelle</a></td>
+
+        </tr>
+    }
+
+
+
+
+</table>
+
+<a href="/Fatura/FaturaEkle" class="btn btn-info">Yeni Fatura Ekle</a>
+
